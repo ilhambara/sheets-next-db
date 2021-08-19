@@ -1,5 +1,6 @@
+import Head from "next/head";
 import { google } from "googleapis";
-import { Container, Heading, Box, Text } from "@chakra-ui/react";
+import { Heading, Box, Text } from "@chakra-ui/react";
 
 export async function getServerSideProps({ query }) {
 	//Auth
@@ -32,12 +33,19 @@ export async function getServerSideProps({ query }) {
 export default function Post({ name, information }) {
 	return (
 		<>
-			<Container maxW="container.lg" pt="10" color="gray.900">
-				<Box w="90%">
-					<Heading my={10}>{name}</Heading>
-					<Text fontSize="lg">{information}</Text>
-				</Box>
-			</Container>
+			<Head>
+				<title>Data From: {name}</title>
+				<meta
+					name="description"
+					content="Turned Google Sheets into a dynamic database using Next + Chakra"
+				/>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+
+			<Box w="90%">
+				<Heading my={10}>{name}</Heading>
+				<Text fontSize="lg">{information}</Text>
+			</Box>
 		</>
 	);
 }
