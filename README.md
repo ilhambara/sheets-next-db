@@ -34,11 +34,11 @@ git clone https://github.com/ilhambara/sheets-next-db.git
 
 - Fill the `GOOGLE_APPLICATION_CREDENTIALS` with a path to your private key from step 3.
 
-- And you can get the `SHEET_ID` your spreadsheets like this:
+- And you can get the `SHEET_ID` from your spreadsheets like this:
 
 <img src="public/img/sheets-id.png" width=60% height="auto">
 
-Note: notice that the highlighted string is a `SHEET_ID` that we use in our `.env.local` file.
+Note: notice that the highlighted string is a `SHEET_ID` that we use in our `.env.local` file. It is important to set the permissions of your shared spreadsheets to prevent anyone except you to edit the sheets.
 
 **4. Install required dependencies**
 
